@@ -1,0 +1,6 @@
+{
+  "name": "AgroShield - Watershed Farming & Runoff Intelligence",
+  "description": "Intelligent watershed-level farming and agricultural runoff prevention platform with live GPS, weather intelligence, and voice decision support.",
+  "requestFramePermissions": ["geolocation", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

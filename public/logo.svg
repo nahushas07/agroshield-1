@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- Sky & Weather Gradient -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#bae6fd" />
+    </linearGradient>
+
+    <!-- Field Terrace Gradients -->
+    <linearGradient id="fieldGrad1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#15803d" />
+      <stop offset="100%" stop-color="#22c55e" />
+    </linearGradient>
+    <linearGradient id="fieldGrad2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#166534" />
+      <stop offset="100%" stop-color="#15803d" />
+    </linearGradient>
+    <linearGradient id="fieldGrad3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#14532d" />
+      <stop offset="100%" stop-color="#166534" />
+    </linearGradient>
+
+    <!-- Water Stream Gradient -->
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Shield Border Gradient -->
+    <linearGradient id="shieldBorder" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#166534" />
+      <stop offset="50%" stop-color="#0f766e" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+
+    <!-- Clip Path for Shield Interior -->
+    <clipPath id="shieldClip">
+      <path d="M 200 30 C 275 30 350 48 350 135 C 350 250 250 330 200 365 C 150 330 50 250 50 135 C 50 48 125 30 200 30 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Outer Protective Glow & Shield Rim -->
+  <path d="M 200 24 C 282 24 358 43 358 135 C 358 256 254 340 200 376 C 146 340 42 256 42 135 C 42 43 118 24 200 24 Z"
+        fill="none" stroke="url(#shieldBorder)" stroke-width="12" stroke-linejoin="round" />
+
+  <!-- Shield Base Background -->
+  <path d="M 200 30 C 275 30 350 48 350 135 C 350 250 250 330 200 365 C 150 330 50 250 50 135 C 50 48 125 30 200 30 Z"
+        fill="#f0fdf4" />
+
+  <!-- Clipped Interior Graphics: Sky, Weather, Fields & Watershed -->
+  <g clip-path="url(#shieldClip)">
+    <!-- Atmospheric Sky (Upper Section) -->
+    <rect x="0" y="30" width="400" height="150" fill="url(#skyGrad)" opacity="0.85" />
+
+    <!-- Sun & Sunlight Rays -->
+    <circle cx="285" cy="95" r="28" fill="#facc15" />
+    <circle cx="285" cy="95" r="38" fill="#fde047" opacity="0.3" />
+
+    <!-- Cloud with gentle rain indicating weather monitoring -->
+    <path d="M 120 100 A 18 18 0 0 1 150 90 A 24 24 0 0 1 190 105 A 16 16 0 0 1 180 120 L 125 120 A 15 15 0 0 1 120 100 Z" fill="#ffffff" opacity="0.9" />
+    <!-- Rain droplets -->
+    <line x1="135" y1="126" x2="130" y2="136" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+    <line x1="150" y1="128" x2="145" y2="138" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+    <line x1="165" y1="126" x2="160" y2="136" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Agricultural Field Terraces / Furrows (Mid Section) -->
+    <!-- Distant Terrace -->
+    <path d="M 40 165 Q 160 145 360 160 L 360 210 Q 180 200 40 215 Z" fill="url(#fieldGrad1)" />
+    <!-- Furrow lines -->
+    <path d="M 60 175 Q 180 165 340 178" fill="none" stroke="#4ade80" stroke-width="2" opacity="0.7" />
+    <path d="M 50 195 Q 190 185 350 200" fill="none" stroke="#4ade80" stroke-width="2.5" opacity="0.7" />
+
+    <!-- Middle Terrace -->
+    <path d="M 40 210 Q 200 195 360 215 L 360 280 Q 210 260 40 285 Z" fill="url(#fieldGrad2)" />
+    <path d="M 45 235 Q 210 220 355 242" fill="none" stroke="#86efac" stroke-width="2.5" opacity="0.6" />
+    <path d="M 45 260 Q 220 245 355 270" fill="none" stroke="#86efac" stroke-width="3" opacity="0.6" />
+
+    <!-- Forefront Fertile Ground -->
+    <path d="M 40 280 Q 200 265 360 285 L 360 370 L 40 370 Z" fill="url(#fieldGrad3)" />
+
+    <!-- Flowing Watershed / Water Stream (Meandering through the fields to base) -->
+    <path d="M 215 155 C 210 185 240 210 230 240 C 220 275 160 295 185 330 C 195 345 200 365 200 370 C 198 370 192 345 180 330 C 150 295 205 270 215 240 C 222 215 198 185 205 155 Z"
+          fill="url(#waterGrad)" />
+    <!-- Water highlight ripple -->
+    <path d="M 212 180 C 218 205 230 225 224 245 C 216 270 175 295 185 325"
+          fill="none" stroke="#e0f2fe" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+  </g>
+
+  <!-- Inner Crest Precision Stroke -->
+  <path d="M 200 34 C 272 34 344 51 344 135 C 344 247 248 325 200 359 C 152 325 56 247 56 135 C 56 51 128 34 200 34 Z"
+        fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.6" />
+</svg>
